@@ -1,7 +1,10 @@
+import java.util.Arrays;
+
 public class LotteryTickets {
     public static void main(String[] args) {
         int[] ticket = {34, 43, 45, 65, 21, 54};
-        int[] ticket2 = {34, 43, 54, 65, 21, 54};
+        int[] ticket2 = Arrays.copyOf(ticket, ticket.length);
+        ricket2[2] = 54;
 
         System.out.print("Ticket 1 numbers: ");
         printTicketNumbers(ticket);
