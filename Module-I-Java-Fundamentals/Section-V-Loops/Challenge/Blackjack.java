@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Blackjack {
-
     public static Scanner scan = new Scanner(System.in);
     
     public static void main(String[] args) {
@@ -44,13 +43,11 @@ public class Blackjack {
         }
 
         System.out.println("\nDealer's turn");
-        System.out.println("\n The dealer's cards are \n" + cardString(dealerCard1) 
-            + "\n and a \n" + cardString(dealerCard2));
+        System.out.println("\n The dealer's cards are \n" + cardString(dealerCard1) + "\n and a \n" + cardString(dealerCard2));
         System.out.println("Dealer's total is " + dealerTotal);
 
         while (dealerTotal < 17) {
             int newCard = drawRandomCard();
-
             dealerTotal += Math.min(newCard, 10);
             System.out.println("\n Dealer gets a \n" + cardString(newCard));
             System.out.println("Dealer's total is " + dealerTotal);
@@ -178,7 +175,6 @@ public class Blackjack {
                     "  |o o%%|\n"+ 
                     "  | |%%%|\n"+ 
                     "  |_%%%>|\n";
-
             default: return "not possible";
         }
     }
